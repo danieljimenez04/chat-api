@@ -33,12 +33,15 @@ const Users = db.define('users' ,{
         type: DataTypes.STRING,
         allowNull: false,
     },
-    gender: {
+    profileImage: {
         type: DataTypes.STRING,
     },
-    birthday: {
-        type: DataTypes.DATEONLY,
-        allowNull: false
+    phone: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate:{
+            len:[2,16]
+        }
     },
     role: {
         type: DataTypes.STRING,
